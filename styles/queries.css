@@ -1,0 +1,23 @@
+@media (min-width: 900px) {
+    .max-w900 {
+        display: none !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .min-w900 {
+        display: none !important;
+    }
+}
+
+@media (min-width: 400px) {
+    .max-w400 {
+        display: none !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .min-w400 {
+        display: none !important;
+    }
+}

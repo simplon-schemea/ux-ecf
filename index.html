@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description"
+          content="ViWos est une petite entreprise de services du numérique qui est spécialisée dans le Web et le Mobile">
+    <title>ViWos - Accueil</title>
+    <link rel="preload" href="fonts/roboto/Roboto-Regular.ttf" as="font" crossOrigin="anonymous">
+    <link rel="preload" href="fonts/roboto/Roboto-Bold.ttf" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/queries.css">
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/menu.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/burger.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <script src="js/events.js" defer></script>
+</head>
+<body>
+<div id="root">
+    <header>
+        <div class="navigation">
+            <button class="button btn-icon burger max-w900" data-burger-menu="burger-menu">
+                <img loading="lazy" src="images/burger.svg" alt="burger" width="512" height="512"/>
+            </button>
+            <template id="burger-menu">
+                <div class="burger-menu">
+                    <button class="button" data-link="/">Home</button>
+                    <button class="button" data-menu="menu-competences" data-link="/competences">Nos competences
+                    </button>
+                </div>
+            </template>
+            <div class="navigation-content min-w900">
+                <button class="button" data-link="/">Home</button>
+                <div class="menu-container">
+                    <button class="button" data-menu="menu-competences" data-link="/competences">Nos competences
+                    </button>
+                    <div class="anchor anchor-left anchor-bottom">
+                        <div class="menu animate" id="menu-competences">
+                            <div class="menu-clip">
+                                <ul class="menu-content">
+                                    <li data-link="/competences#conseil">conseil</li>
+                                    <li data-link="/competences#dev">développement</li>
+                                    <li data-link="/competences#maintenance">maintenance</li>
+                                    <li data-link="/competences#formation">formation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="button" data-link="/activities">Nos activités</button>
+            </div>
+        </div>
+        <div class="center">
+            <h1 class="title page-title">Accueil</h1>
+        </div>
+        <div class="navigation justify-end">
+            <button class="button" data-link="/contact">Contact</button>
+        </div>
+    </header>
+    <main class="grow">
+        <div id="burger-menu-container" class="animate">
+            <div class="overlay"></div>
+            <div class="burger-content">
+                <div>
+                    <button class="button btn-icon burger-close"><img loading="lazy" src="images/back.svg" alt="back"
+                                                                      width="24"
+                                                                      height="24"/></button>
+                </div>
+                <div class="burger-menu-portal"></div>
+            </div>
+        </div>
+        <x-route data-path="/" data-title="Accueil">
+            <div class="margin-auto">
+                <div>
+                    <h2 class="title">ViWos</h2>
+                    <div class="text-content">
+                        <h3>Ce qu'est ViWos</h3>
+                        <p>
+                            ViWos est une petite entreprise de services du numérique qui
+                            est spécialisée dans le Web et le Mobile. <em>Ce n’est pas une agence Web</em>, c’est une
+                            société d’ingénierie qui propose des compétences techniques à ses clients B2B sur des
+                            problématiques Web et Mobile.
+                        </p>
+                        <p>
+                            Ses activités sont reparties en 4 pôles :
+                            le <a data-link="/competences#conseil"><em>conseil</em></a>,
+                            le <a data-link="/competences#dev"><em>développement</em></a>,
+                            la <a data-link="/competences#maintenance"><em>maintenance</em></a>
+                            et la <a data-link="/competences#formation"><em>formation</em></a>.
+                        </p>
+                    </div>
+                    <div class="text-content">
+                        <h3>Notre mission</h3>
+                        <p>
+                            La mission de ViWos est de former ses clients et ses collaborateurs aux
+                            technologies et bonne pratiques les plus récentes. Cela se traduit par l’introduction, la
+                            création, l’exploitation et la formation à l’utilisation de nouvelles technologies.
+                            Chaque collaborateur doit prendre du temps pour se former, former ses collègues et ses
+                            clients en permanence.
+                        </p>
+                        <p>
+                            ViWos ambitionne d’être un pôle de compétences et de
+                            savoirs qui privilégie <em>l’honnêteté</em>, la <em>loyauté</em>, la <em>réactivité</em>
+                            et la <em>qualité</em> des réponses
+                            apportées à ses clients.
+                        </p>
+                    </div>
+                </div>
+                <div class="clients">
+                    <h3>Ces entreprises nous font confiance</h3>
+                    <div class="clients-logo">
+                        <img loading="lazy" src="images/amazon-small.jpg" alt="amazon" width="200" height="73"/>
+                        <img loading="lazy" src="images/logo-creation-small.png" alt="sample" width="200" height="113"/>
+                        <img loading="lazy" src="images/phoenix-valley.svg" alt="phoenix valley" width="2640"
+                             height="2235"/>
+                    </div>
+                </div>
+            </div>
+        </x-route>
+        <x-route data-path="/competences" data-title="Nos compétences">
+            <div class="margin-auto">
+                <h3 id="conseil">Conseil</h3>
+                <div class="text-content">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis commodi doloremque
+                        dolorum fuga fugiat, impedit in ipsum iusto laborum maiores minus nam optio provident quod
+                        reiciendis repellendus sed similique.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis commodi doloremque
+                        dolorum fuga fugiat, impedit in ipsum iusto laborum maiores minus nam optio provident quod
+                        reiciendis repellendus sed similique.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis commodi doloremque
+                        dolorum fuga fugiat, impedit in ipsum iusto laborum maiores minus nam optio provident quod
+                        reiciendis repellendus sed similique.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis commodi doloremque
+                        dolorum fuga fugiat, impedit in ipsum iusto laborum maiores minus nam optio provident quod
+                        reiciendis repellendus sed similique.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis commodi doloremque
+                        dolorum fuga fugiat, impedit in ipsum iusto laborum maiores minus nam optio provident quod
+                        reiciendis repellendus sed similique.
+                    </p>
+                </div>
+                <h3 id="dev">Développement</h3>
+                <div class="text-content">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error expedita libero voluptas! Beatae ea
+                        eligendi facere fuga hic iure maxime nemo nihil, omnis quidem repellendus repudiandae, saepe tempore
+                        veniam voluptatibus.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error expedita libero voluptas! Beatae ea
+                        eligendi facere fuga hic iure maxime nemo nihil, omnis quidem repellendus repudiandae, saepe tempore
+                        veniam voluptatibus.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error expedita libero voluptas! Beatae ea
+                        eligendi facere fuga hic iure maxime nemo nihil, omnis quidem repellendus repudiandae, saepe tempore
+                        veniam voluptatibus.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error expedita libero voluptas! Beatae ea
+                        eligendi facere fuga hic iure maxime nemo nihil, omnis quidem repellendus repudiandae, saepe tempore
+                        veniam voluptatibus.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error expedita libero voluptas! Beatae ea
+                        eligendi facere fuga hic iure maxime nemo nihil, omnis quidem repellendus repudiandae, saepe tempore
+                        veniam voluptatibus.
+                    </p>
+                </div>
+                <h3 id="maintenance">Maintenance</h3>
+                <div class="text-content">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error expedita libero voluptas! Beatae ea
+                        eligendi facere fuga hic iure maxime nemo nihil, omnis quidem repellendus repudiandae, saepe tempore
+                        veniam voluptatibus.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error expedita libero voluptas! Beatae ea
+                        eligendi facere fuga hic iure maxime nemo nihil, omnis quidem repellendus repudiandae, saepe tempore
+                        veniam voluptatibus.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error expedita libero voluptas! Beatae ea
+                        eligendi facere fuga hic iure maxime nemo nihil, omnis quidem repellendus repudiandae, saepe tempore
+                        veniam voluptatibus.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error expedita libero voluptas! Beatae ea
+                        eligendi facere fuga hic iure maxime nemo nihil, omnis quidem repellendus repudiandae, saepe tempore
+                        veniam voluptatibus.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error expedita libero voluptas! Beatae ea
+                        eligendi facere fuga hic iure maxime nemo nihil, omnis quidem repellendus repudiandae, saepe tempore
+                        veniam voluptatibus.
+                    </p>
+                </div>
+                <h3 id="formation">Formation</h3>
+                <div class="text-content">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error expedita libero voluptas! Beatae ea
+                        eligendi facere fuga hic iure maxime nemo nihil, omnis quidem repellendus repudiandae, saepe tempore
+                        veniam voluptatibus.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error expedita libero voluptas! Beatae ea
+                        eligendi facere fuga hic iure maxime nemo nihil, omnis quidem repellendus repudiandae, saepe tempore
+                        veniam voluptatibus.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error expedita libero voluptas! Beatae ea
+                        eligendi facere fuga hic iure maxime nemo nihil, omnis quidem repellendus repudiandae, saepe tempore
+                        veniam voluptatibus.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error expedita libero voluptas! Beatae ea
+                        eligendi facere fuga hic iure maxime nemo nihil, omnis quidem repellendus repudiandae, saepe tempore
+                        veniam voluptatibus.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error expedita libero voluptas! Beatae ea
+                        eligendi facere fuga hic iure maxime nemo nihil, omnis quidem repellendus repudiandae, saepe tempore
+                        veniam voluptatibus.
+                    </p>
+                </div>
+
+            </div>
+        </x-route>
+        <x-route data-path="/contact" data-title="Contact">
+            <h2>Contact</h2>
+            <p>general: contact@viwos.com</p>
+            <p>webmaster: webmaster@viwos.com</p>
+            <p>formation: formation@viwos.com</p>
+        </x-route>
+        <x-route data-path="/activities" data-title="Nos activités">
+            <div class="activity-grid">
+                <div class="activity">
+                    <div class="activity-title">Lorem</div>
+                    <img loading="lazy" src="images/project.jpg" alt="activity thumbnail" width="1200" height="628" class="activity-image" />
+                    <div class="activity-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolor ducimus odit porro repudiandae tenetur voluptatibus. Adipisci debitis fugiat hic incidunt magnam qui quisquam recusandae? Animi itaque possimus temporibus totam.
+                    </div>
+                </div>
+                <div class="activity">
+                    <div class="activity-title">Lorem</div>
+                    <img loading="lazy" src="images/project.jpg" alt="activity thumbnail" width="1200" height="628" class="activity-image" />
+                    <div class="activity-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolor ducimus odit porro repudiandae tenetur voluptatibus. Adipisci debitis fugiat hic incidunt magnam qui quisquam recusandae? Animi itaque possimus temporibus totam.
+                    </div>
+                </div>
+                <div class="activity">
+                    <div class="activity-title">Lorem</div>
+                    <img loading="lazy" src="images/project.jpg" alt="activity thumbnail" width="1200" height="628" class="activity-image" />
+                    <div class="activity-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolor ducimus odit porro repudiandae tenetur voluptatibus. Adipisci debitis fugiat hic incidunt magnam qui quisquam recusandae? Animi itaque possimus temporibus totam.
+                    </div>
+                </div>
+                <div class="activity">
+                    <div class="activity-title">Lorem</div>
+                    <img loading="lazy" src="images/project.jpg" alt="activity thumbnail" width="1200" height="628" class="activity-image" />
+                    <div class="activity-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolor ducimus odit porro repudiandae tenetur voluptatibus. Adipisci debitis fugiat hic incidunt magnam qui quisquam recusandae? Animi itaque possimus temporibus totam.
+                    </div>
+                </div>
+                <div class="activity">
+                    <div class="activity-title">Lorem</div>
+                    <img loading="lazy" src="images/project.jpg" alt="activity thumbnail" width="1200" height="628" class="activity-image" />
+                    <div class="activity-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolor ducimus odit porro repudiandae tenetur voluptatibus. Adipisci debitis fugiat hic incidunt magnam qui quisquam recusandae? Animi itaque possimus temporibus totam.
+                    </div>
+                </div>
+                <div class="activity">
+                    <div class="activity-title">Lorem</div>
+                    <img loading="lazy" src="images/project.jpg" alt="activity thumbnail" width="1200" height="628" class="activity-image" />
+                    <div class="activity-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolor ducimus odit porro repudiandae tenetur voluptatibus. Adipisci debitis fugiat hic incidunt magnam qui quisquam recusandae? Animi itaque possimus temporibus totam.
+                    </div>
+                </div>
+            </div>
+
+        </x-route>
+    </main>
+    <footer>
+        <div class="center">
+            Nous suivre: <a href="https://twitter.com"><img class="icon icon-big" src="images/twitter.svg"
+                                                            alt="follow on twitter" width="16" height="16"/></a>
+        </div>
+        <div class="spacer grow min-w400"></div>
+        <span>
+        Contact: <a href="mailto:someone@viwos.com">contact@viwos.com</a>
+        </span>
+    </footer>
+</div>
+<script>
+    /**
+     * inline routing script for faster First Contentful Paint
+     */
+
+    function flash(element) {
+        const bounds = element.getBoundingClientRect();
+        const effect = document.body.appendChild(document.createElement("div"));
+
+        effect.classList.add("flash");
+
+        const pad = 5;
+
+        Object.assign(effect.style, {
+            left: bounds.x + scrollX - pad + "px",
+            top: bounds.y + scrollY - pad + "px",
+            width: bounds.width + pad * 2 + "px",
+            height: bounds.height + pad * 2 + "px",
+            backgroundColor: "#ff0"
+        });
+
+        effect.addEventListener("animationend", function () {
+            effect.remove();
+        });
+    }
+
+    window.addEventListener("navigate", function () {
+        document.body.querySelectorAll(".flash").forEach(value => value.remove());
+    });
+
+    function handleRouting() {
+        let path = new URL(location).searchParams.get("route") || "/";
+
+        path = decodeURIComponent(path);
+
+        if (!path.startsWith("/")) {
+            path = "/" + path;
+        }
+
+        switch (path) {
+            case "/index.html":
+                path = "/";
+                break;
+        }
+
+        const routes = document.querySelectorAll(`x-route`);
+
+        for (const route of routes) {
+            const isActive = route.dataset.path === path;
+            route.classList[isActive ? "add" : "remove"]("active");
+
+            const title = route.dataset.title;
+            if (isActive && title) {
+                document.title = "ViWos - " + title;
+                document.body.querySelector("h1").innerText = title;
+            }
+        }
+
+        const anchor = location.href.split("#")[1];
+
+        if (anchor) {
+            const a = document.getElementById(anchor);
+            if (a) {
+                flash(a);
+
+                const header = document.querySelector("#root > header").getBoundingClientRect().height;
+                const top = a.getBoundingClientRect().top;
+
+                window.scrollBy({
+                    behavior: "smooth",
+                    top: top - header - 5
+                });
+            }
+        }
+    }
+
+    function navigateTo(route, title) {
+        const [path, anchor] = route.split("#");
+        const url = new URL(location.href.split("#")[0] + (anchor ? "#" + anchor : ""));
+        url.searchParams.set("route", path);
+        history.pushState(null, title ? "ViWos - " + title : null, url);
+        window.dispatchEvent(new Event("navigate"));
+    }
+
+    window.addEventListener("popstate", () => window.dispatchEvent(new Event("navigate")));
+    window.addEventListener("navigate", handleRouting);
+    handleRouting();
+</script>
+<link rel="stylesheet" href="styles/activities.css">
+<link rel="stylesheet" href="styles/fonts.css">
+</body>
+</html>

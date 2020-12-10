@@ -1,0 +1,49 @@
+.menu-container {
+    position: relative;
+}
+
+.menu-container > button {
+    height: 100%;
+}
+
+.menu-content {
+    animation: 0.3s ease-out;
+    animation-fill-mode: forwards;
+}
+.menu.enter .menu-content {
+    animation-name: menu-enter;
+}
+
+.menu.leave .menu-content {
+    animation-name: menu-leave;
+}
+
+.menu-clip {
+    overflow: hidden;
+    position: absolute;
+    padding-top: 5px;
+}
+
+ul.menu-content {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background-color: #fffe;
+}
+
+ul.menu-content li {
+    border: 1px solid var(--border-color);
+    padding: 5px 10px;
+    transition: background-color 0.2s ease-out;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-size: 0.9em;
+}
+
+ul.menu-content li:hover {
+    background-color: #0003;
+}
+
+ul.menu-content li:not(:last-child) {
+    border-bottom: none;
+}

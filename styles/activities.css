@@ -1,0 +1,77 @@
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-gap: 20px;
+    justify-content: center;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.activity {
+    min-height: 350px;
+    width: 100%;
+    background-color: #f6f6f6;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: filter 0.2s ease-out;
+}
+
+.activity:hover {
+    filter: brightness(1.1);
+}
+
+.activity-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #fffd;
+    margin: 10px 0;
+    border: 1px solid var(--border-color);
+    border-left: none;
+    border-right: none;
+    padding: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.activity-image {
+    object-fit: cover;
+    height: 130px;
+    width: 100%;
+}
+
+.activity-body {
+    padding: 10px;
+    text-align: justify;
+    font-size: 0.95em;
+}
+
+@media (max-width: 700px) {
+    .activity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-image {
+        display: none;
+    }
+
+    .activity {
+        min-height: unset;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .activity-title {
+        background: none;
+        border: none;
+        border-bottom: 1px solid var(--border-color);
+        padding: 0 0 5px;
+    }
+
+    .activity-body {
+        padding: 0 0 10px;
+    }
+}
